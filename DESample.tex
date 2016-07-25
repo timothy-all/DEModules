@@ -10,32 +10,18 @@
 \usetikzlibrary{topaths,intersections,calc,shapes.geometric,arrows,through, positioning}
 \usepackage{fp}
 
-\title{Linear ODEs}
+\title{Coupled Harmonic Oscillators}
 \author{Timothy All}
 
 \begin{abstract}
-  ODEs and stuff
+  We show how to model and solve the system of ODEs that models the coupled, undamped, spring-mass system.
 \end{abstract}
 
 \begin{document}
 \maketitle
 
 
-
-\begin{problem} Which of the following ODEs is linear?
-\begin{multipleChoice}
-\choice{$y'' - y^2 = 0$}
-\choice{$\sin y = y'$}
-\choice[correct]{$y''+t y = 0$}
-\choice{$\sqrt{1+y^2}=y'$}
-\end{multipleChoice}
-\end{problem}
-
-\begin{problem}
-   If $y'' - y = 0$, then $y = \answer{c_1 \cosh(t) + c_2 \sinh(t)}$ where $c_1$ and $c_2$ are constants.
-\end{problem}
-
-\begin{example} Model the motion of a coupled spring-mass system.
+Consider the coupled system pictured below.
 
 \begin{image}
 %\begin{animateinline}[controls]{18}
@@ -49,10 +35,10 @@
 \pgfmathsetmacro\ab{(\b-\a)}
 \pgfmathsetmacro\bo{8-\b}
 
-\node[circle,draw] (A) at (\a,0) {};%2
-\node[circle,draw] (B) at (\b,0) {};%5
-\draw [fill=red] (A) circle (1.5pt);%
-\draw [fill=red] (B) circle (1.5pt);%
+\node[circle,draw,red] (A) at (\a,0) {$m_1$};%2
+\node[circle,draw,green] (B) at (\b,0) {$m_2$};%5
+%\draw [fill=red] (A) circle (1.5pt);%
+%\draw [fill=red] (B) circle (1.5pt);%
 
 \draw [decoration={aspect=0.3, segment length=\oa mm, amplitude=3mm,coil},decorate] (.1,0)--(A) node[midway,above=.5] {$k_1$};%
 \draw [decoration={aspect=0.3, segment length=\ab mm, amplitude=3mm,coil},decorate] (A)--(B) node[midway,above=.5] {$k_3$};%
@@ -62,7 +48,7 @@
 
 \draw [pattern=north west lines] (7.9,-1) rectangle (8.1,1);
 
-\draw [|-|] (2,0)++(-90:1) --+ (0:\rTick) node[midway,above] {$\answer{x_1}$};
+\draw [|-|] (2,0)++(-90:1) --+ (0:\rTick) node[midway,above] {$x_1$};
 \draw [|-|] (5,0)++(-90:1) --+ (0:\rTick/2) node[midway,above] {$x_2$};
 
 \end{tikzpicture}
@@ -71,18 +57,18 @@
 
 \end{image}
 
+
+
 \begin{explanation}
-Newton's second law says that $F= \answer{m \cdot a}$
+Newton's second law says that the sum total force $F$ acting on an object of mass $m$ satisfies $F= \answer{m \cdot a}$, where $a$ is the \begin{prompt} acceleration \end{prompt}. On the other hand, we have Hooke's Law: the force $F$ required to stretch a spring $x$ units beyond its natural length is $\answer{k \cdot x}$ where $k$ is some constant depending on the spring.
+
+
+
 
 
 \end{explanation}
 
 
-\end{example}
-
-Plz work
-
-\[ \graph{ax^2,a=.5} \]
 
 
 \end{document}
