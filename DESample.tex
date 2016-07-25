@@ -35,35 +35,34 @@
    If $y'' - y = 0$, then $y = \answer{c_1 \cosh(t) + c_2 \sinh(t)}$ where $c_1$ and $c_2$ are constants.
 \end{problem}
 
-%\begin{image}
-%\begin{tikzpicture}[x=1.5cm]
-%\useasboundingbox (-.1,-1.5) rectangle (8.1,1.5);
-%\pgfmathsetmacro\rTick{1}
-%\pgfmathsetmacro\a{2+\rTick}
-%\pgfmathsetmacro\b{5+\rTick/2}
-%\pgfmathsetmacro\oa{\a*3/2}
-%\pgfmathsetmacro\ab{(\b-\a)}
-%\pgfmathsetmacro\bo{8-\b}
+\begin{image}
+\begin{tikzpicture}[x=1.5cm]
+\useasboundingbox (-.1,-1.5) rectangle (8.1,1.5);
+\pgfmathsetmacro\rTick{1}
+\pgfmathsetmacro\a{2+\rTick}
+\pgfmathsetmacro\b{5+\rTick/2}
+\pgfmathsetmacro\oa{\a*3/2}
+\pgfmathsetmacro\ab{(\b-\a)}
+\pgfmathsetmacro\bo{8-\b}
 
-%\node[circle,draw] (A) at (\a,0) {};%2
-%\node[circle,draw] (B) at (\b,0) {};%5
+\node[circle,draw] (A) at (\a,0) {};%2
+\node[circle,draw] (B) at (\b,0) {};%5
+\draw [fill=red] (A) circle (1.5pt);%
+\draw [fill=red] (B) circle (1.5pt);%
 
-%\draw [fill=red] (A) circle (1.5pt);%
-%\draw [fill=red] (B) circle (1.5pt);%
+\draw [decoration={aspect=0.3, segment length=\oa mm, amplitude=3mm,coil},decorate] (.1,0)--(A) node[midway,above=.5] {$k_1$};%
+\draw [decoration={aspect=0.3, segment length=\ab mm, amplitude=3mm,coil},decorate] (A)--(B) node[midway,above=.5] {$k_3$};%
+\draw [decoration={aspect=0.3, segment length=\bo mm, amplitude=3mm,coil},decorate] (B)--(7.9,0) node[midway,above=.5] {$k_2$};%
 
-%\draw [decoration={aspect=0.3, segment length=\oa mm, %amplitude=3mm,coil},decorate] (.1,0)--(A) node[midway,above=.5] {$k_1$};%
-%\draw [decoration={aspect=0.3, segment length=\ab mm, %amplitude=3mm,coil},decorate] (A)--(B) node[midway,above=.5] {$k_3$};%
-%\draw [decoration={aspect=0.3, segment length=\bo mm, %amplitude=3mm,coil},decorate] (B)--(7.9,0) node[midway,above=.5] {$k_2$};%
+\draw [pattern=north east lines] (-.1,-1) rectangle (.1,1);%
 
-%\draw [pattern=north east lines] (-.1,-1) rectangle (.1,1);%
+\draw [pattern=north west lines] (7.9,-1) rectangle (8.1,1);
 
-%\draw [pattern=north west lines] (7.9,-1) rectangle (8.1,1);
+\draw [|-|] (2,0)++(-90:1) --+ (0:\rTick) node[midway,above] {$x_1$};
+\draw [|-|] (5,0)++(-90:1) --+ (0:\rTick/2) node[midway,above] {$x_2$};
 
-%\draw [|-|] (2,0)++(-90:1) --+ (0:\rTick) node[midway,above] {$x_1$};
-%\draw [|-|] (5,0)++(-90:1) --+ (0:\rTick/2) node[midway,above] {$x_2$};
-
-%\end{tikzpicture}
-%\end{image}
+\end{tikzpicture}
+\end{image}
 
 Plz work
 
