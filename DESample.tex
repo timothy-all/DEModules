@@ -73,6 +73,49 @@ The sum total force acting on $m_2$ is $F_2 = \answer{-k_2 x_2 + k_3(x_2-x_1)}$
 
 \end{problem}
 
+\begin{problem} The function $x_2(t)$ satisfies the following differential equation:
+\[ \answer{ m_2 x_2'' = -k_3 x_1 + (k_3-k_2)x_2.}\]
+\end{problem}
+
+\begin{tikzpicture}[scale=.9]
+
+\def\X{-y^2}
+\def\Y{x^2}
+\def\length{sqrt((\X)^2+(\Y)^2)}
+
+\begin{axis}[x=3cm,y=3cm,z=0cm, xtick={-1,-.5,...,1},
+title={$x^3+y^3=K \approx 0$},
+small,
+view={0}{90},
+enlarge x limits,
+domain=-1:1,
+domain y=-1:1,
+ymin=-1,
+ymax=1,
+xmin=-1,
+xmax=1,
+axis on top]
+
+\fill [white] (axis cs:-1,-1) rectangle (rel axis cs:1,1);
+
+\addplot3[domain=-1.1:1.1,
+domain y=-1:1,
+    color=blue!30!white,
+    quiver={
+        u={(\X)/\length},
+        v={(\Y)/\length},
+        scale arrows=.1
+        },
+    -stealth,
+    samples=20
+]{0};
+
+\addplot3[thick,contour gnuplot={levels={.5,.01,-.2,-.5}}]
+{x^3+y^3};
+\end{axis}
+\end{tikzpicture}
+
+
 
 
 
