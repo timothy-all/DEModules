@@ -1,0 +1,20 @@
+\newenvironment {prompt}{}{}
+\newcommand {\black }[0]{\color {black}}
+\newcommand {\darkgray }[0]{\color {darkgray}}
+\newcommand {\gray }[0]{\color {gray}}
+\newcommand {\lightgray }[0]{\color {lightgray}}
+\newcommand {\white }[0]{\color {white}}
+\newcommand {\blue }[0]{\color {blue}}
+\newcommand {\red }[0]{\color {red}}
+\newcommand {\green }[0]{\color {green}}
+\newcommand {\yellow }[0]{\color {yellow}}
+\newcommand {\magenta }[0]{\color {magenta}}
+\newcommand {\cyan }[0]{\color {cyan}}
+\newcommand {\thanks }[1]{}
+\newcommand {\and }[0]{\unskip , }
+\newcommand {\thanksmark }[1]{}
+\newcommand {\thanksgap }[1]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\Sectionformat }[2]{#1}
