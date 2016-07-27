@@ -1,0 +1,14 @@
+\documentclass[tikz,convert={outfile=circles.svg}]{standalone}
+\usepackage{tikz}
+\usepackage{multido}
+
+
+\begin{document}
+\multido{\i=0+1}{10}{%
+\begin{tikzpicture}
+\draw (0,0) circle (\i pt);
+\end{tikzpicture}}
+
+
+
+\end{document}
